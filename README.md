@@ -14,7 +14,7 @@ assets/img/         企画書・ルックブックから書き出した画像
 
 ## ページ構成
 
-HERO（キービジュアル）→ NEWS → TRAILER → INTRODUCTION → STORY → CHARACTER → WORLD（世界観・カラー）→ STAFF → FESTIVAL（制作スケジュール・出品予定映画祭）→ SUPPORT（スタッフ・協賛募集）→ フッター
+HERO（キービジュアル）→ NEWS → TRAILER → INTRODUCTION → STORY → CHARACTER→ STAFF → FESTIVAL（出品予定映画祭）→ SUPPORT（スタッフ・協賛募集）→ フッター
 
 ## 更新のしかた
 
