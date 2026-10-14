@@ -113,7 +113,8 @@ blockquote { margin: 0; }
 }
 .header.is-scrolled .header__logo { opacity: 1; }
 
-.nav ul { display: flex; gap: clamp(14px, 1.8vw, 28px); }
+.nav { display: flex; align-items: center; }
+.nav ul { display: flex; gap: clamp(12px, 1.5vw, 26px); }
 .nav a {
   display: block;
   text-decoration: none;
@@ -630,6 +631,64 @@ blockquote { margin: 0; }
 .fest-list li { font-size: 14px; line-height: 1.7; padding: 6px 0; }
 @media (max-width: 767px) {
   .fest-list { grid-template-columns: 1fr; }
+}
+
+/* ---------- クラウドファンディング ---------- */
+.crowdfunding { background: var(--ink); color: var(--text-light); text-align: center; }
+.crowdfunding .heading { align-items: center; }
+.crowdfunding .heading--ja .heading__en::after { left: 50%; transform: translateX(-50%); }
+.crowdfunding__lead {
+  margin: 0 0 1em;
+  font-family: var(--font-mincho);
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.7;
+  letter-spacing: .1em;
+}
+.crowdfunding__text { margin: 0 auto 2.4em; max-width: 720px; color: rgba(243,235,220,.9); }
+
+.cf-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: min(100%, 340px);
+  padding: 1em 2.2em;
+  background: var(--vermilion);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-mincho);
+  letter-spacing: .08em;
+  transition: background .3s ease;
+}
+.cf-btn.is-ready:hover { background: #b8482a; }
+.cf-btn__label { font-size: clamp(16px, 1.8vw, 19px); line-height: 1.6; }
+.cf-btn__soon { font-family: var(--font-gothic); font-size: 12px; letter-spacing: .2em; opacity: .9; }
+.cf-btn.is-ready .cf-btn__soon { display: none; }
+.cf-btn--hero { margin-top: 1.8em; min-width: 0; padding: .8em 1.8em; }
+
+/* ---------- SNS ---------- */
+.sns { display: flex; gap: 14px; }
+.sns[hidden], .sns li[hidden] { display: none; }
+.sns a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border: 1px solid var(--line-light);
+  border-radius: 50%;
+  color: var(--text-light);
+  transition: background .3s ease, color .3s ease;
+}
+.sns a:hover { background: var(--text-light); color: var(--ink); }
+.sns svg { width: 20px; height: 20px; }
+.sns--footer { justify-content: center; margin: 0 0 1.6em; }
+.sns--nav { margin-left: 24px; gap: 8px; }
+.sns--nav a { width: 32px; height: 32px; border: 0; }
+.sns--nav svg { width: 18px; height: 18px; }
+@media (max-width: 1023px) {
+  .nav { flex-direction: column; gap: 32px; }
+  .nav .sns--nav { flex-direction: row; margin-left: 0; gap: 14px; }
+  .sns--nav a { width: 44px; height: 44px; border: 1px solid var(--line-light); }
 }
 
 /* ---------- SUPPORT ---------- */

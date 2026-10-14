@@ -1,6 +1,30 @@
 (function () {
   'use strict';
 
+  // ===== 外部リンクの設定 =====
+  // URLが決まったら '' の中に貼り付けてください。
+  // 空のあいだは、クラウドファンディングは「近日スタート」表示、SNSアイコンは非表示になります。
+  var LINKS = {
+    crowdfunding: '',
+    instagram: '',
+    facebook: ''
+  };
+
+  document.querySelectorAll('[data-link]').forEach(function (el) {
+    var url = LINKS[el.getAttribute('data-link')];
+    if (url) {
+      el.href = url;
+      el.target = '_blank';
+      el.rel = 'noopener';
+      el.classList.add('is-ready');
+    } else if (el.closest('.sns')) {
+      el.parentNode.hidden = true;
+    }
+  });
+  document.querySelectorAll('.sns').forEach(function (ul) {
+    if (!ul.querySelector('li:not([hidden])')) ul.hidden = true;
+  });
+
   var header = document.getElementById('header');
   var toggle = document.getElementById('navToggle');
   var nav = document.getElementById('globalNav');
