@@ -17,7 +17,7 @@
   --line: rgba(43, 35, 28, .18);
   --line-light: rgba(243, 235, 220, .22);
 
-  --font-mincho: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-mincho: "Klee One", "Hiragino Mincho ProN", "Yu Mincho", serif;
   --font-gothic: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
   --font-en: "Cormorant Garamond", "Times New Roman", serif;
 
@@ -247,7 +247,7 @@ blockquote { margin: 0; }
   display: block;
   margin: .1em 0 .15em;
   font-family: var(--font-mincho);
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(42px, 8.4vw, 112px);
   line-height: 1.25;
   letter-spacing: .08em;
