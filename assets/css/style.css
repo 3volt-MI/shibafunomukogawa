@@ -117,7 +117,7 @@ blockquote { margin: 0; }
 .nav a {
   display: block;
   text-decoration: none;
-  font-family: var(--font-en);
+  font-family: var(--font-mincho);
   font-size: 14px;
   letter-spacing: .14em;
   position: relative;
@@ -157,12 +157,18 @@ blockquote { margin: 0; }
 .nav-open .nav-toggle span:nth-child(2) { top: 22px; transform: rotate(-30deg); }
 
 @media (max-width: 1023px) {
+  /* backdrop-filter があると固定配置のメニューがヘッダー内に閉じ込められるため外す */
+  .header.is-scrolled {
+    background: rgba(22, 17, 13, .95);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
   .header__logo { opacity: 1; }
   .nav-toggle { display: block; }
   .nav {
     position: fixed;
     inset: 0;
-    background: rgba(22, 17, 13, .97);
+    background: var(--ink);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -364,6 +370,7 @@ blockquote { margin: 0; }
   background: var(--vermilion);
 }
 .heading--light { color: var(--text-light); }
+.heading--light.heading--ja .heading__en { color: var(--text-light); }
 .heading--ja .heading__en {
   font-family: var(--font-mincho);
   font-weight: 500;
@@ -449,9 +456,9 @@ blockquote { margin: 0; }
 }
 .trailer__placeholder .en {
   display: block;
-  font-family: var(--font-en);
-  font-size: clamp(28px, 5vw, 56px);
-  letter-spacing: .2em;
+  font-family: var(--font-mincho);
+  font-size: clamp(24px, 4vw, 44px);
+  letter-spacing: .3em;
   line-height: 1.4;
 }
 
@@ -642,14 +649,7 @@ blockquote { margin: 0; }
 /* ---------- SUPPORT ---------- */
 .support { text-align: center; }
 .support .heading { align-items: center; }
-.support .heading__ja { padding: 0 40px; }
-.support .heading__ja::after {
-  content: "";
-  position: absolute;
-  right: 0; top: 50%;
-  width: 28px; height: 1px;
-  background: var(--vermilion);
-}
+.support .heading--ja .heading__en::after { left: 50%; transform: translateX(-50%); }
 .support__lead {
   margin: 0 0 1.4em;
   font-family: var(--font-mincho);
