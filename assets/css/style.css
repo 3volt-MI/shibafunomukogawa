@@ -516,9 +516,9 @@ blockquote { margin: 0; }
   font-size: clamp(24px, 2.6vw, 30px);
   letter-spacing: .14em;
   line-height: 1.5;
+  margin-bottom: .6em;
 }
 .chara__age { font-size: .5em; letter-spacing: .1em; margin-left: .3em; color: var(--text-sub); }
-.chara__en { margin: 0 0 1em; font-family: var(--font-en); font-size: 14px; letter-spacing: .24em; color: var(--text-sub); }
 .chara__body > p:not([class]) { margin: 0 0 1em; font-size: 14px; }
 .chara blockquote {
   margin-top: 1.2em;
@@ -571,12 +571,10 @@ blockquote { margin: 0; }
   letter-spacing: .2em;
   line-height: 1.5;
 }
-.person__name span {
-  display: block;
-  font-family: var(--font-en);
-  font-size: 14px;
-  letter-spacing: .24em;
-  color: var(--text-sub);
+.person__title {
+  margin-right: 1em;
+  font-size: .5em;
+  letter-spacing: .2em;
 }
 .person__body > p:not([class]) { margin: 0 0 1em; font-size: 14px; }
 @media (max-width: 767px) {
