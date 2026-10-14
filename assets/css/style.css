@@ -664,7 +664,6 @@ blockquote { margin: 0; }
 .cf-btn__label { font-size: clamp(16px, 1.8vw, 19px); line-height: 1.6; }
 .cf-btn__soon { font-family: var(--font-gothic); font-size: 12px; letter-spacing: .2em; opacity: .9; }
 .cf-btn.is-ready .cf-btn__soon { display: none; }
-.cf-btn--hero { margin-top: 1.8em; min-width: 0; padding: .8em 1.8em; }
 
 /* ---------- SNS ---------- */
 .sns { display: flex; gap: 14px; }
