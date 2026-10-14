@@ -364,6 +364,21 @@ blockquote { margin: 0; }
   background: var(--vermilion);
 }
 .heading--light { color: var(--text-light); }
+.heading--ja .heading__en {
+  font-family: var(--font-mincho);
+  font-weight: 500;
+  font-size: clamp(28px, 3.6vw, 40px);
+  letter-spacing: .24em;
+  padding-bottom: 18px;
+  position: relative;
+}
+.heading--ja .heading__en::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 28px; height: 1px;
+  background: var(--vermilion);
+}
 .heading--light .heading__ja { color: rgba(243,235,220,.7); }
 
 .note {
