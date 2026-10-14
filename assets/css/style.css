@@ -557,10 +557,8 @@ blockquote { margin: 0; }
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
   gap: clamp(24px, 5vw, 64px);
-  padding: clamp(40px, 5vw, 56px) 0;
-  border-top: 1px solid var(--line);
 }
-.person:first-of-type { border-top: 0; padding-top: 0; }
+.heading--next { margin-top: clamp(64px, 9vw, 112px); }
 .person__img img { width: 100%; aspect-ratio: 1 / 1.1; object-fit: cover; object-position: center top; filter: sepia(.15); }
 .person__role { margin: 0; font-size: 12px; color: var(--vermilion); letter-spacing: .3em; }
 .person__name {
@@ -570,11 +568,6 @@ blockquote { margin: 0; }
   font-size: clamp(26px, 3vw, 34px);
   letter-spacing: .2em;
   line-height: 1.5;
-}
-.person__title {
-  margin-right: 1em;
-  font-size: .5em;
-  letter-spacing: .2em;
 }
 .person__body > p:not([class]) { margin: 0 0 1em; font-size: 14px; }
 @media (max-width: 767px) {
